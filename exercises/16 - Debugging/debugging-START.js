@@ -9,6 +9,10 @@ people.forEach((person, index) => {
 });
 
 // Console Methods
+console.log()
+console.group(`start`)
+console.log(`stuff inside`)
+console.groupEnd('start')
 
 // Callstack
 

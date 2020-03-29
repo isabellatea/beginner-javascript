@@ -125,6 +125,23 @@
     ];
 
 
+
+
+    const dogNames = ['ellie', 'lincoln', 'zola', 'kyuss'];
+
+    function fullNamer(name) {
+      return `${name} Tea`;
+    }
+
+    function capitolize (word) {
+      return `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+    }
+
+    // console.log(capitolize('hello'))
+
+    console.log(dogNames.map(fullNamer).map(capitolize))
+
+
     /*
       Looping Methods
     */
