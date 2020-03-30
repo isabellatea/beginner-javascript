@@ -142,6 +142,21 @@
     console.log(dogNames.map(fullNamer).map(capitolize))
 
 
+
+    function findByProp(prop, propWeAreLookingFor) {
+      return (student) => {
+        return student[prop] === propWeAreLookingFor;
+      } 
+    }
+
+    const student1 = students.find(findByProp("id", '54cb'))
+    console.log(student1)
+
+    const student2 = students.find(findByProp("first_name", 'Gilly'))
+    console.log(student2)
+
+
+
     /*
       Looping Methods
     */
