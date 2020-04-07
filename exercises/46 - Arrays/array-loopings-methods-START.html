@@ -157,6 +157,72 @@
 
 
 
+    //reduce
+    const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+
+    function tallyNumbers(tally, currentTotal) {
+      return tally + currentTotal;
+    }
+
+    const allOrders = orderTotals.reduce(tallyNumbers, 0)
+    console.log(allOrders)
+
+
+
+    //reduce practice with arrow fns
+
+    const inventory = [
+  { type: 'shirt', price: 4000 },
+  { type: 'pants', price: 4532 },
+  { type: 'socks', price: 234 },
+  { type: 'shirt', price: 2343 },
+  { type: 'pants', price: 2343 },
+  { type: 'socks', price: 542 },
+  { type: 'pants', price: 123 },
+];
+
+  //count number of items in inventory
+
+  function itemCount(items, currentItem) {
+    return items + 1;
+  }
+
+  const allItems = inventory.reduce(itemCount, 0)
+  console.log(allItems)
+
+  const allItems2 = inventory.reduce((items, eachItem) => items + 1, 0)
+  console.log(allItems2)
+
+  //total the prices
+
+  function priceCalc(prices, eachPrice) {
+    return prices + eachPrice.price;
+  }
+
+  const allPrices = inventory.reduce(priceCalc,0)
+  console.log(allPrices)
+
+  const allPrices2 = inventory.reduce((prices, eachPrice) => prices + eachPrice.price, 0)
+  console.log (allPrices2)
+
+  //total of each type of item
+
+  function countTypes(totals, item) {
+    totals[item.type] = totals[item.type] + 1 || 1;
+    return totals;
+  }
+
+  const allInventory = inventory.reduce(countTypes, {})
+  console.log(allInventory)
+
+  const allInventory2 = inventory.reduce((allItems, item) => {
+    allItems[item.type] = allItems[item.type] + 1 || 1;
+    return allItems;
+  }, {})
+  console.log(allInventory2)
+
+
+
     /*
       Looping Methods
     */
